@@ -1,0 +1,98 @@
+/* Paleta de colores */
+:root {
+    --color-primary: #6a5acd; /* Lila */
+    --color-secondary: #ff7f50; /* Naranja */
+    --color-background: #f8f8ff; /* Blanco ligeramente azulado */
+    --color-text: #333; /* Gris oscuro */
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: var(--color-primary);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+nav a:hover {
+    background-color: var(--color-secondary); /* Cambio de color al pasar el ratón */
+}
+
+header {
+    background-color: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Estilos para las secciones */
+section {
+    margin-top: 40px;
+}
+
+section h2 {
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 10px;
+}
+
+.project {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project a {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.project a:hover {
+    background-color: var(--color-secondary);
+}
