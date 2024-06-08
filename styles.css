@@ -1,99 +1,142 @@
-/* Paleta de colores */
-:root {
-    --color-primary: #6a5acd; /* Lila */
-    --color-secondary: #ff7f50; /* Naranja */
-    --color-background: #f8f8ff; /* Blanco ligeramente azulado */
-    --color-text: #333; /* Gris oscuro */
+/* Reset de márgenes y padding */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
 }
 
-/* Estilos generales */
+/* Estilo del cuerpo */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background: #ffe4e1; /* Cambiado a rosa claro */
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: var(--color-background);
-    color: var(--color-text);
+    background-color: #ffe4e1;
+    min-height: 100%;
+    text-align: justify;
+    padding-bottom: 10%;
+    margin-bottom: 0; /* Añadido para eliminar el espacio entre el final de la página y el footer */
 }
 
-/* Estilos para la barra de navegación */
-nav {
-    background-color: var(--color-primary);
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-}
-
+/* Navegación */
 nav ul {
-    list-style-type: none;
+    background: #9370DB; /* Lila mediano */
+    padding: 10px 20px;
+    text-align: left; /* Alinear a la izquierda */
     margin: 0;
-    padding: 0;
-    text-align: center;
+    display: flex;
 }
 
-nav li {
-    display: inline;
+nav ul li {
     margin: 0 10px;
 }
 
-nav a {
-    color: #fff;
+nav ul li a {
+    color: white;
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s; /* Transición suave */
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
 }
 
-nav a:hover {
-    background-color: var(--color-secondary); /* Cambio de color al pasar el ratón */
+nav ul li a:hover {
+    background: #8A2BE2; /* Lila */
 }
 
+/* Estilo para el encabezado */
 header {
-    background-color: var(--color-primary);
-    color: #fff;
+    background: #9370DB; /* Igual al color del nav */
+    color: white; /* Cambiado a blanco */
+    padding: 20px 20px; /* Más espacio alrededor del texto */
     text-align: center;
-    padding: 20px 0;
-}
-
-main {
-    padding: 20px;
-}
-
-/* Estilos para las secciones */
-section {
-    margin-top: 40px;
-}
-
-section h2 {
-    border-bottom: 2px solid var(--color-primary);
-    padding-bottom: 10px;
-}
-
-/* Estilos para los proyectos */
-.project {
-    background-color: #fff; /* Fondo blanco */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Cambiado a 8px */
     margin-bottom: 20px;
 }
 
+/* Encabezado dentro de div en páginas distintas de la principal */
+#personal-info-header header,
+#projects-header header {
+    margin-top: 10px; /* Espacio entre la navegación y el encabezado */
+}
+
+/* Contenedor del encabezado */
+#home-header,
+#personal-info-header,
+#projects-header {
+    margin-bottom: auto; /* Deja que el footer vaya al final */
+}
+
+/* Sección de información de contacto e información personal */
+#contact-info, #personal-info, #projects {
+    text-align: center;
+    padding: 20px;
+    background: white; /* Fondo blanco */
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px; /* Cambiado de 10px a 8px */
+    box-shadow: 0px 0px 30px rgb(245, 115, 115); /* Cambiado el color de la sombra */
+}
+
+#contact-info img, #personal-info img {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+    width: 200px;
+    height: 200px;
+}
+
+
+#contact-info p, #personal-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Sección de proyectos */
+#projects {
+    background: white; /* Fondo blanco */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+
+.project {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
 .project h3 {
-    margin-top: 0;
+    margin-bottom: 10px;
+    color: #6A0DAD;
 }
 
 .project p {
-    margin-bottom: 10px;
+    margin: 0;
+    font-size: 1em;
+    color: #555;
 }
 
-.project a {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: #fff;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 0.3s;
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #9370DB; /* Lila mediano */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: auto; /* Deja que el footer vaya al final */
+    margin-bottom: 0; /* Añadido para eliminar el espacio entre el final de la página y el footer */
 }
 
-.project a:hover {
-    background-color: var(--color-secondary);
-}
+
